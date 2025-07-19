@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Rent-A-Basket",
+  "version": "1.0",
+  "description": "Overlay a 'Rent Instead (Eco)' button on Walmart product pages to promote eco-friendly renting.",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://www.walmart.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.walmart.com/ip/*", "https://www.walmart.com/*/ip/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["chatbot.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

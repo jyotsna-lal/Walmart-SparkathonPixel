@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rent-A-Basket</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Rent-A-Basket 🌱</h2>
+    <p>This extension activates on Walmart product pages.</p>
+  </body>
+</html>
